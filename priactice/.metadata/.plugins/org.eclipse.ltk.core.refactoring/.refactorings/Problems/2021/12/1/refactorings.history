@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;nextNumber&apos; in &apos;miu.exam.FibonacciNumber&apos; to &apos;secondNumber&apos;&#x0D;&#x0A;- Original project: &apos;Problems&apos;&#x0D;&#x0A;- Original element: &apos;miu.exam.FibonacciNumber.nextNumber&apos;&#x0D;&#x0A;- Renamed element: &apos;miu.exam.FibonacciNumber.secondNumber&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;nextNumber&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;miu.exam{FibonacciNumber.java[FibonacciNumber^nextNumber" name="secondNumber" references="true" setter="false" stamp="1640671777089" textual="false" version="1.0"/>
+</session>

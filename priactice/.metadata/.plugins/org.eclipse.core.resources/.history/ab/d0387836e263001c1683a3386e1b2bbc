@@ -1,0 +1,30 @@
+package miu;
+
+public class PrimeCount {
+	public static void main(String[] args) {
+		PrimeCount p = new PrimeCount();
+		int i = p.primeCount(20, 22);
+		System.out.println(i);
+	}
+
+	int primeCount(int start, int end) {
+		int counter = 0;
+		boolean found = false;
+		for (int i = start; i < end ; i++) {
+			for (int j = 2; j < i && !found; j++) {
+				if (i % j == 0) {
+					found = true;
+				}
+			}
+
+			if (!found) {
+				counter++;
+			}
+			found=false;
+
+		}
+		return counter;
+
+	}
+
+}

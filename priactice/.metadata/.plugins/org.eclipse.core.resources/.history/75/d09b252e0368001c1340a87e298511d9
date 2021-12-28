@@ -1,0 +1,38 @@
+package miu.exam;
+
+public class NormalNumber {
+	
+	public static void main(String[] args) {
+		NormalNumber n = new NormalNumber();
+		System.out.println(n.isNormal(6));
+	}
+
+	int isNormal(int n) {
+		boolean odd= false;
+		for (int i = 1; i <= n; ++i) {
+
+			// if number is divided by i
+			// i is the factor
+			if (n % i == 0) {
+				 odd = isOdd(i);
+				 if(odd) {
+					 return 0;
+				 }
+				
+			}
+		}
+		if(odd) {
+			return 1;
+		}else {
+			return 0;
+		}
+
+	}
+
+	boolean isOdd(int i) {
+
+		return Math.abs(i) % 2 > 0;
+
+	}
+
+}

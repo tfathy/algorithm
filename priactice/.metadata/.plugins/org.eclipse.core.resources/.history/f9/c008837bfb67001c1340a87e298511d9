@@ -1,0 +1,54 @@
+package miu.exam;
+
+public class OddHeavy {
+
+	public static void main(String[] args) {
+		OddHeavy o = new OddHeavy();
+		int[] arr = {2, 4, 6, 8, 11};
+		System.out.println(o.isOddHeavy(arr));
+	}
+
+	int isOddHeavy(int[] a) {
+		if (a.length == 0)
+			return 0;
+		
+		if (a.length == 1) {
+			if (isOdd(a[0])) {
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+		
+		int result = 1;
+
+		int largetEven=0;
+		int currOddValue = 0;
+		for (int i = 0; i < a.length; i++) {
+			if (isOdd(a[i])) {
+				currOddValue = a[i];
+			} else if (isEven(a[i])) {
+				int even = a[i];
+				if(even > largetEven) {
+					largetEven = even;
+				}
+			}			
+			
+		}
+		if (largetEven > currOddValue) {
+			return 0;
+		} else {
+			result = 1;
+		}
+		return result;
+	}
+
+	boolean isOdd(int i) {
+		return i % 2 > 0;
+	}
+
+	boolean isEven(int i) {
+		return i % 2 == 0;
+	}
+
+}

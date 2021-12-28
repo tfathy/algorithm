@@ -1,0 +1,22 @@
+package miu;
+
+public class PrimeCount {
+	public static void main(String[] args) {
+		PrimeCount p = new PrimeCount();
+		int i = p.primeCount(10,30);
+		System.out.println(i);
+	}
+	
+	int primeCount(int start, int end) {
+		int counter =0;
+		for(int i=2 ; i< end-1; i++) {
+			if(start % i ==0) {
+				counter++;
+				start++;
+			}
+		}		
+		return counter;
+		
+	}
+
+}

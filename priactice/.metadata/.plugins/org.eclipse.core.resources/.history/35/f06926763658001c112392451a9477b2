@@ -1,0 +1,46 @@
+package leetcode;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class RomanToInteger {
+	 Map<String,Integer> map = new HashMap<>();
+	 
+	 public static void main(String[] args) {
+		 RomanToInteger r = new RomanToInteger();
+		 int i = r.romanToInt("III");
+		 System.out.println(i);;
+	}
+	 
+	 public int romanToInt(String s) {  
+	        int num = 0;
+	        populateMap();  
+	        for(int i=0 ; i<s.length(); i++){
+	            char c = s.charAt(i);
+	            char nextC = s.charAt(i);
+	            int curr = map.get(c);
+	            int next = map.get(nextC);
+	            if(curr < next){
+	                num = num + (next-curr);
+	            }else{
+	                 num = num + curr;
+	            }
+	        }
+	        
+	        
+	        
+	        return num;
+	        
+	    }
+	    
+	    private  void populateMap(){
+	        map.put("I",1);
+	        map.put("V",5);
+	        map.put("X",10);
+	        map.put("L",50);
+	        map.put("C",100);
+	        map.put("D",500);
+	        map.put("M",1000);
+	    }
+
+}

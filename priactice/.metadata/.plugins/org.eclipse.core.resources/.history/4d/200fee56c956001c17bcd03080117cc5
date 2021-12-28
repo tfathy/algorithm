@@ -1,0 +1,21 @@
+package leetcode;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class TwoSums {
+	
+	public static void main(String[] args) {
+		int[] intArray = {2,9,7,15,3,5,8};
+		TwoSums s = new TwoSums();
+		
+	}
+	
+	int [] towSums(int[] nums, int target) {
+		Map<Integer,Integer> map = new HashMap<>();
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,38 @@
+package miu;
+
+public class UpCount {
+
+	
+	public static void main(String[] args) {
+		UpCount count = new UpCount();
+		int[] a = {};
+		int total = count.upCount(a, 5);
+		System.out.println(total);
+		
+	}
+	 int upCount(int[] a,int n) {
+		 if(a.length==0)  return 0;
+		 
+		 int total = 0;		  
+		 for(int i= 0 ; i<a.length;i++){
+			 if(i==0) {
+				 if(a[i]>n) { // may be the first element in the array greater than n
+					 total++;
+				 }
+			 }else { // passed the first element. compare to prev
+				 int sum = a[i]+a[i-1];
+				 if(sum >5) {
+					 total++;
+				 }
+			 }
+			 
+			 
+			 
+		 }
+		 
+		
+		
+		 
+		 return total;
+	 }
+}

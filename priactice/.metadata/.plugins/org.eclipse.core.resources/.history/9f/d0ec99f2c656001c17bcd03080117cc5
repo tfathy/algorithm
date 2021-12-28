@@ -1,0 +1,10 @@
+package leetcode;
+
+public class TwoSums {
+	
+	public static void main(String[] args) {
+		int[] intArray = {2,7,11,15};
+	}
+	
+
+}

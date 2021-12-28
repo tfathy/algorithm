@@ -1,0 +1,30 @@
+package miu;
+
+public class NextPerfectSquare {
+
+	public static void main(String[] args) {
+		NextPerfectSquare n = new NextPerfectSquare();
+		double x = n.nextPerfectSquare(6);
+		System.out.println(x);
+
+	}
+
+	int nextPerfectSquare(int n) {
+		if (n < 0)
+			return 0;
+		
+		int result = 0;
+		Integer next = n + 1;
+		while (next > n) {
+			result =(int) Math.sqrt(next.doubleValue());
+			int reminder = (int) (result % 2);
+			if (reminder == 0) {
+				return result;
+			}
+			next++;
+		}
+		return result;
+
+	}
+
+}

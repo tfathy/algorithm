@@ -1,0 +1,28 @@
+package miu.exam;
+
+import java.util.HashMap;
+
+public class RemoveDublicateElmnt {
+	
+	public static void main(String[] args) {
+		RemoveDublicateElmnt elm = new RemoveDublicateElmnt();
+		int [] arr = {2,0,6,7,2,0,9,7};
+	}
+	
+	int[] removeDublicate(int[] array) {
+		
+		HashMap<Integer,Integer> map = new HashMap<>();
+		for (int i=0; i<array.length; i++) {
+			if(! map.containsKey(array[i]))
+			map.put(array[i], i);
+		}
+		int[] ukArray = new int[map.size()];
+		
+		for(int i=0; i< ukArray.length; i++) {
+			ukArray[i]= (int) map.get(i);
+		}
+		return ukArray;
+	}
+	
+	
+}

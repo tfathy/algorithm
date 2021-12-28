@@ -1,0 +1,24 @@
+package miu.exam;
+
+public class FunnyArray {
+	
+	public static void main(String[] args) {
+		FunnyArray f = new FunnyArray();
+		int[] arr = {12, 11, 5,13, 0};
+		System.out.println(f.isFunny(arr));
+	}
+	
+	
+	int isFunny(int[] arr) {
+		int funny = 1;
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]==5) {
+				if(arr[i+1]!=13) {
+					funny = 0;					
+				}
+			}
+		}
+		return funny;
+	}
+
+}

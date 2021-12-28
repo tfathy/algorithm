@@ -1,0 +1,19 @@
+package miu;
+
+public class PrimeCount {
+	public static void main(String[] args) {
+		PrimeCount p = new PrimeCount();
+	}
+	
+	int primeCount(int start, int end) {
+		int counter =0;
+		for(int i=2 ; i< end-1; i++) {
+			if(start % i ==0) {
+				counter++;
+			}
+		}		
+		return counter;
+		
+	}
+
+}
