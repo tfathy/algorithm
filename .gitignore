@@ -1,6 +1,6 @@
 *.class
 .metadata
-/priactice/.metadata
+priactice/.metadata/
 *.log
 /.plugins
 # BlueJ files
