@@ -1,0 +1,5 @@
+*.class
+.metadata
+/priactice/.metadata
+*.log
+/.plugins
